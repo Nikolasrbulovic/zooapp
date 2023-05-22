@@ -1,4 +1,4 @@
-import { useState } from "react";
+import Animal from "./Animal"
 function AnimalList({animalList,onRemove,moveToTop}){
    
    
@@ -13,22 +13,9 @@ return (
        <th>remove</th>
        </tr>
    </thead>
-   <tbody> 
-   {animalList.map((e,index)=>{
-       return ( 
-        <tr key={index}>
-           <td>{e.name}</td>
-           <td>{e.species}</td>
-           <td>{e.birthDate}</td>
-           <td>{e.sector}</td>
-           <td><button onClick={()=> onRemove(e.name)}>Remove</button></td>
-           <td><button onClick={()=> moveToTop(index)}>Move</button></td>
-       </tr>
-            )
-        })}
-   </tbody>
+  
 </table>
-
+    <Animal animalList={animalList} onRemove={onRemove} moveToTop={moveToTop}></Animal>
    </div>
 
         

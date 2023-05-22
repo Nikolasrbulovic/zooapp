@@ -34,7 +34,7 @@ const AddAnimal = ({addAnimal,sectorList}) => {
                 </label>
             </div>
             <div>
-            <select name="animals" id="anikmals" form="animalForm" onChange={(e)=>{setSelect(e.target.value)}}>
+            <select name="animals" id="animals" form="animalForm" onChange={(e)=>{setSelect(e.target.value)}}>
            { sectorCopy.map((e)=>{
                 return(
                     <option value={e}>{e}</option>
