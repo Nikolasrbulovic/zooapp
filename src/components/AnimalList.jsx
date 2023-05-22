@@ -3,7 +3,8 @@ function AnimalList({animalList,onRemove,moveToTop}){
    
    
 return (
-   <div> <table>
+   <div> 
+    <table>
    <thead>
        <tr>
        <th>Ime zivotinje </th>
@@ -15,11 +16,19 @@ return (
    </thead>
   
 </table>
-    <Animal animalList={animalList} onRemove={onRemove} moveToTop={moveToTop}></Animal>
+    <tbody> 
+        {animalList.map((e,index)=>{
+            return(
+                <div>
+                 <Animal e={e} onRemove={onRemove} moveToTop={moveToTop} index={index}></Animal>
+
+                </div>
+           
+            )
+    })}
+    </tbody>
    </div>
 
-        
-        
 )
 }
 

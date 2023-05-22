@@ -1,12 +1,13 @@
+import { Link } from "react-router-dom";
 import Sector from "./Sector";
 
-const Sectors= ({sectorListCopy,animalList,checkAnimals}) =>{
-return (
+const Sectors = ({ sectorListCopy, animalList, checkAnimals }) => {
+  return (
     <div>
-          
-            <Sector sectorListCopy={sectorListCopy} animalList={animalList} checkAnimals={checkAnimals}></Sector>
-          
+      {sectorListCopy.map((sector, id) => (
+        <Sector sector={sector} id={id}></Sector>
+      ))}
     </div>
-)
-}
+  );
+};
 export default Sectors;

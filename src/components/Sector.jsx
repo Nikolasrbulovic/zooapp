@@ -1,21 +1,13 @@
-const Sector = ({sectorListCopy,animalList,checkAnimals}) =>{
- return (
-    <ol>
-    {sectorListCopy.map((sector) => {
-        return (
-          <li>
-            {sector}
-            <button
-              onClick={() => {
-                checkAnimals(sector, animalList);
-              }}
-            >
-              Check Animals
-            </button>
-          </li>
-        );
-      })}
-      </ol>
- )
-}
-export default Sector
+import { Link } from "react-router-dom";
+
+const Sector = ({ sector, id }) => {
+  return (
+    <li>
+      Ime sektora: {sector}
+      <Link to={id}>
+        <button>Check Animals</button>
+      </Link>
+    </li>
+  );
+};
+export default Sector;

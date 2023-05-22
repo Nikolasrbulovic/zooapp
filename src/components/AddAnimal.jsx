@@ -5,7 +5,7 @@ import 'react-calendar/dist/Calendar.css';
 const AddAnimal = ({addAnimal,sectorList}) => {
    
     const [dateValue, onDateChange] = useState(new Date());
-    const [name, setName] = useState({})
+    const [name, setName] = useState()
     const [species, setSpecies] = useState()
     const [select, setSelect] = useState()
     const sectorCopy = sectorList
