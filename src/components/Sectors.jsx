@@ -1,13 +1,20 @@
-import { Link } from "react-router-dom";
-import Sector from "./Sector";
 
-const Sectors = ({ sectorListCopy, animalList, checkAnimals }) => {
+import Sector from "./Sector";
+import { ListGroup } from "react-bootstrap";
+
+const Sectors = ({ sectorListCopy}) => {
   return (
-    <div>
-      {sectorListCopy.map((sector, id) => (
+    <ListGroup  className="w-25" variant="flush">
+      {  sectorListCopy.map((sector, id) => {
+    return (
+      <ListGroup.Item  className="d-flex">
         <Sector sector={sector} id={id}></Sector>
-      ))}
-    </div>
-  );
+      </ListGroup.Item>
+    )
+  })
+  }
+    </ListGroup>
+  )
 };
 export default Sectors;
+

@@ -1,13 +1,24 @@
+import { Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
 const Sector = ({ sector, id }) => {
   return (
-    <li>
-      Ime sektora: {sector}
-      <Link to={id}>
-        <button>Check Animals</button>
-      </Link>
-    </li>
+    <div className="d-flex flex-grow-1 mr-3 justify-content-between">
+        <div>
+          <li>
+          Ime sectora : {sector}
+          </li>
+        </div>
+        <div>
+          <Link to={`${id}`}>
+          <Button>Check Animals</Button>
+          </Link>
+        </div>
+      
+    </div>
+   
   );
 };
 export default Sector;
+
+

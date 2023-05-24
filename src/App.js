@@ -1,10 +1,8 @@
-import logo from "./logo.svg";
 import "./App.css";
-import AppContainer from "./AppContainer";
 import { Routes, Route } from "react-router-dom";
+import "bootstrap/dist/css/bootstrap.min.css";
 import TestRoutes from "./components/TestRoutes";
 import Test123 from "./components/Test123";
-import AnimalList from "./components/AnimalList";
 import NewAnimal from "./components/NewAnimal";
 import NewAnimalsList from "./components/NewAnimalList";
 import AddAnimal from "./components/AddAnimal";
@@ -92,7 +90,10 @@ function App() {
           <AddAnimal addAnimal={addAnimal} sectorList={sectorList}></AddAnimal>
         }
       ></Route>
-      <Route path="animals" element={<NewAnimalsList />}></Route>
+      <Route
+        path="animals"
+        element={<NewAnimalsList animalsList={animalList} />}
+      ></Route>
       <Route
         path="animals/:id"
         element={<NewAnimal animalsList={animalList} />}
